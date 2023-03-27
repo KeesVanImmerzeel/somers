@@ -33,7 +33,7 @@ archetype <- r; terra::values(archetype) <- sample(1:length(archetypes), n, repl
 bron <- r; terra::values(bron) <- sample(1:length(bronnen), n, replace=TRUE); names(bron) <- "bron"
 type_perceel <- r; terra::values(type_perceel) <- sample(1:length(type_percelen), n, replace=TRUE); names(type_perceel) <- "type_perceel"
 winterpeil <- r; terra::values(winterpeil) <- sample(1:length(winterpeilen), n, replace=TRUE); names(winterpeil) <- "winterpeil"
-variabele <- r; terra::values(variabele) <- sample(1:length(variabelen), n, replace=TRUE); names(variabele) <- "variabele"
+#variabele <- r; terra::values(variabele) <- sample(1:length(variabelen), n, replace=TRUE); names(variabele) <- "variabele"
 kwel_scenario <- r; terra::values(kwel_scenario) <- sample(1:length(kwel_scenarios), n, replace=TRUE)
 kwel_scenario <- terra::ifel(bron == nr_bron["ov"], kwel_scenario, 0); names(kwel_scenario) <- "kwel_scenario"
 scenario <- r; terra::values(scenario) <- sample(1:length(scenarios), n, replace=TRUE)
@@ -49,7 +49,7 @@ archetype %>% terra::writeRaster("data-raw/rSIF_example_input/archetype.tif", ov
 bron %>% terra::writeRaster("data-raw/rSIF_example_input/bron.tif", overwrite=TRUE)
 type_perceel %>% terra::writeRaster("data-raw/rSIF_example_input/type_perceel.tif", overwrite=TRUE)
 winterpeil %>% terra::writeRaster("data-raw/rSIF_example_input/winterpeil.tif", overwrite=TRUE)
-variabele %>% terra::writeRaster("data-raw/rSIF_example_input/variabele.tif", overwrite=TRUE)
+#variabele %>% terra::writeRaster("data-raw/rSIF_example_input/variabele.tif", overwrite=TRUE)
 kwel_scenario %>% terra::writeRaster("data-raw/rSIF_example_input/kwel_scenario.tif", overwrite=TRUE) # alleen in dataset "ov"
 scenario %>% terra::writeRaster("data-raw/rSIF_example_input/scenario.tif", overwrite=TRUE) # alleen bij drukdrainage
 drooglegging %>% terra::writeRaster("data-raw/rSIF_example_input/drooglegging.tif", overwrite=TRUE)
