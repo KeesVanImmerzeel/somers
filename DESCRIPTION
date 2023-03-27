@@ -1,0 +1,25 @@
+Package: somers
+Type: Package
+Title: Toepassing SOOMERS Methodiek Voor Bepaling CO2 Uitstoot Veenweide Gebieden
+Version: 0.1.0
+Authors@R: 
+    person(given = "Kees",
+           family = "van Immerzeel",
+           role = c("aut", "cre"),
+           email = "c.h.van.immerzeel@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0003-0926-3248"))
+Maintainer: Kees van Immerzeel <c.h.van.immerzeel@gmail.com>
+Description: Toepassing van de resultaten van de SOMERS methodiek voor een vlakdekkend beeld van de CO2 uitstoot. 
+    De basis wordt gevormd door de brondata friesland_groningen, overijssel en west-nederland.
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.2.3
+Imports: 
+    akima,
+    dplyr,
+    magrittr,
+    parallelly,
+    terra
