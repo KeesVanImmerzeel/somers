@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Bereken vlakdekkend de CO2 uitstoot met de [SOMERS](https://www.nobveenweiden.nl/wp-content/uploads/2022/12/SOMERS-1.0-hoofdrapport-2022-v4.0.pdf) methodiek. De informatie die hiervoor wordt gebruikt is:
+Bereken vlakdekkend de CO2 uitstoot met de [SOMERS](https://www.nobveenweiden.nl/wp-content/uploads/2022/12/SOMERS-1.0-hoofdrapport-2022-v4.0.pdf) methodiek (*versie 1.0*). De informatie die hiervoor wordt gebruikt is:
 
 * Archetype (bodemtype): 'hV','pV','kV','hVz','kVz','V','Vz','aVz'.
 
@@ -71,7 +71,7 @@ De betekenis van de resulterende foutcodes is als volgt
 |    -5    | onvoldoende gegevens (1 of meer layers bevatten NA). |
 
 
-# Details
+## Details
 
 
 **Interpolatie**
@@ -111,6 +111,12 @@ De 'id' is een getal bestaande uit 7 cijfers volgens de onderstaande tabel.
 |     5    |          variabele          | 1='CO2-uitstoot.min', 2='CO2-uitstoot.mediaan', 3='CO2-uitstoot.max'               |
 |     6    |        kwel scenario        | 0=niet van toepassing, 1='lichte kwel', 2='lichte wegzijging'                      |
 |     7    | scenario (bij drukdrainage) | 0=niet van toepassing, 1='medium_peil', 2='hoog_peil'                              |
+
+
+**Bodemcode 'aVc'**
+
+Niet alle bodemtype codes komen voor in het 'LETTER' veld van de bodemkaart. Opgemerkt wordt dat bodemkundig de code 'aVc' valt onder de 'madeveengronden'. Dit is code 'aVz' (8) in het model. Met andere woorden: daar waar in de bodemkaart de code 'aVc' voorkomt kan deze voor de bepaling van de CO2 uitstoot volgens SOMERS worden 'vertaald' naar de code 'aVz' (8). Hou er wel rekening mee dat er een verschil is wat betreft de veendikte. Bij 'aVz' bodems is de veendikte kleiner dan in 'aVz' bodems (resp. 50 cm en 70 cm). Als dus de uitstoot van de 'aVz' bodems wordt gebruikt op locaties waar feitelijk een 'aVc' bodem aanwezig is, leidt dat mogelijk tot een *onderschatting* van de CO2 emissie.
+
 
 **Beperkingen**
 
