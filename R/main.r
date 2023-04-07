@@ -26,7 +26,7 @@
 smrs_CO2_uitstoot <- function(r) {
   n <- parallelly::availableCores()
   print(paste(n, 'cores detected. Using', n - 1))
-  res <- terra::app(r, .CO2_uitstoot, cores = n - 1)
+  res <- terra::app(r, .CO2_uitstoot, cores = n-1)
   return(res)
 }
 
@@ -41,6 +41,7 @@ smrs_CO2_uitstoot <- function(r) {
 # @examples
 # x <- c(id=1113300, drooglegging=1.2, slootafstand=45)
 # CO2_uitstoot <- .CO2_uitstoot(x)
+# pracma::interp2()
 .CO2_uitstoot <-
   function(x)
   {
