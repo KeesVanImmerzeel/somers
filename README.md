@@ -51,6 +51,8 @@ r <- terra::rast(system.file('extdata', 'example_input.tif', package='somers', m
 CO2_uitstoot <- smrs_CO2_uitstoot(r)
 ```
 
+Inspiratie voor het samenstellen van een invoer raster en het gebruik van deze package kunt u vinden in de folder `data-raw` waarin het document `example_for_use.r` is opgenomen.
+
 De correctheid van een raster kan worden gecontroleerd met de functie `smrs_validate_input()`:
 
 ``` r
